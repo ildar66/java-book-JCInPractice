@@ -15,6 +15,8 @@ import net.jcip.annotations.NotThreadSafe;
  *         operations: read the value, add one to it, and write out the new value. Since operations in multiple threads may be arbitrarily
  *         interleaved by the runtime, it is possible for two threads to read the value at the same time, both see the same value, and then both add one to it.
  *         The result is that the same sequence number is returned from multiple calls in different threads.
+ *
+ *         @see Sequence
  */
 
 @NotThreadSafe
