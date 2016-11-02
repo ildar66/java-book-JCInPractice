@@ -13,6 +13,8 @@ import net.jcip.annotations.ThreadSafe;
  * StatelessFactorizer
  * A stateless servlet
  * @author Brian Goetz and Tim Peierls
+ *         Simple factorization servlet. It unpacks the number to be factored from the servlet request, factors it, and packages
+ *         the results into the servlet response.
  */
 @ThreadSafe
 public class StatelessFactorizer extends GenericServlet implements Servlet {
