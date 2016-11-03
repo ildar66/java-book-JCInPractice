@@ -7,6 +7,7 @@ package chapter_3.section_2;
  * @author Brian Goetz and Tim Peierls
  *         When ThisEscape publishes the EventListener, it implicitly publishes the enclosing ThisEscape instance as well, because inner class
  *         instances contain a hidden reference to the enclosing instance.
+ * @see SafeListener
  */
 public class ThisEscape {
 
