@@ -11,6 +11,20 @@
  *
  * Locking is not just about mutual exclusion; it is also about memory visibility. To ensure that all threads see the most up-to-date values of shared
  * mutable variables, the reading and writing threads must synchronize on a common lock.
+ *
+ * 
+ * Mutable Objects:
+     If an object may be modified after construction, safe publication ensures only the visibility of the as-published state.
+        Synchronization must be used not only to publish a mutable object, but also every time the object is accessed to ensure visibility
+        of subsequent modifications. To share mutable objects safely, they must be safely published and be either thread-safe or guarded by a lock.
+
+     The publication requirements for an object depend on its mutability:
+
+     Immutable objects can be published through any mechanism;
+
+     Effectively immutable objects must be safely published;
+
+     Mutable objects must be safely published, and must be either threadsafe or guarded by a lock.
  */
 /*
 Sharing Objects Safely
