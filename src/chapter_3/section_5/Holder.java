@@ -5,6 +5,7 @@ package chapter_3.section_5;
  * <p/>
  * Class at risk of failure if not properly published
  * @author Brian Goetz and Tim Peierls
+ *         However, Holder can be made immune to improper publication by declaring the n field to be final, which would make Holder immutable
  */
 public class Holder {
 
