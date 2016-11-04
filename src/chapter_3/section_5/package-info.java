@@ -22,6 +22,13 @@
 
          Storing a reference to it into a field that is properly guarded by a lock.
  *
+ *
+ * Objects that are not technically immutable, but whose state will not be modified after publication, are called effectively immutable.
+ * Safely published effectively immutable objects can be used safely by any thread without additional synchronization.
+ *
+    * For example, Date is mutable, but if you use it as if it were immutable, you may be able to eliminate the locking that would otherwise
+    * be required when shared a Date across threads. Suppose you want to maintain a Map storing the last login time of each user:
+        public Map<String, Date> lastLogin = Collections.synchronizedMap(new HashMap<String, Date>());
  */
 package chapter_3.section_5;
 
