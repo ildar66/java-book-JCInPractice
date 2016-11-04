@@ -10,7 +10,7 @@
  *
  * Objects that are not immutable must be safely published.
  * Safe Publication Idioms:
- 
+
     To publish an object safely, both the reference to the object and the object's state must be made visible to other threads at the same time.
     A properly constructed object can be safely published by:
 
@@ -24,3 +24,4 @@
  *
  */
 package chapter_3.section_5;
+
