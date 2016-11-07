@@ -8,7 +8,7 @@ import net.jcip.annotations.GuardedBy;
 import net.jcip.annotations.ThreadSafe;
 
 /**
- * MonitorVehicleTracker
+ * MonitorVehicleTracker example
  * <p/>
  * Monitor-based vehicle tracker implementation
  * @author Brian Goetz and Tim Peierls
