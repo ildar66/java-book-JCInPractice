@@ -23,4 +23,15 @@ public class SafeVectorHelpers {
             list.remove(lastIndex);
         }
     }
+
+/*    // Iteration that may Throw ArrayIndexOutOfBoundsException.
+    for (int i = 0; i < vector.size()i++)
+        doSomething(vector.get(i))
+
+    // Iteration with Client-side Locking.
+    synchronized (vector) {
+        for (int i = 0; i < vector.size(); i++)
+            doSomething(vector.get(i));
+    }*/
+
 }
