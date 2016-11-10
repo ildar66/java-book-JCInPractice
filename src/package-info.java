@@ -1,6 +1,5 @@
 /**
- * Created by User on 01.11.2016.
- * Introduction
+ * Created by User on 10.11.2016.
  *
  * Summary of Part I (chapters from 1 to 5)
  * The following "concurrency cheat sheet" summarizes the main concepts and rules presented in Part I.
@@ -32,6 +31,4 @@
      Include thread safety in the design processor explicitly document that your class is not thread-safe.
 
      Document your synchronization policy.
-
  */
-package chapter_1;
