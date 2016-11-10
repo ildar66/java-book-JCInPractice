@@ -27,7 +27,9 @@ import java.net.Socket;
 
             Task-handling code must be thread-safe, because it may be invoked concurrently for multiple tasks.
 
- * Under light to moderate load, the thread-per-task approach is an improvement over sequential execution. As long as the request arrival rate does not exceed the server's capacity to handle requests, this approach offers better responsiveness and throughput.
+ * Under light to moderate load, the thread-per-task approach is an improvement over sequential execution.
+ * As long as the request arrival rate does not exceed the server's capacity to handle requests, this approach offers better responsiveness
+ * and throughput.
 
 
  */
