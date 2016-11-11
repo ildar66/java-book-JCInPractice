@@ -20,6 +20,12 @@ import static chapter_5.section_5.LaunderThrowable.launderThrowable;
  *         download into a parallel one: this reduces the amount of time to download all the images. And by fetching results from the
  *         CompletionService and rendering each image as soon as it is available, we can give the user a more dynamic and responsive user interface.
  *         This implementation is shown in Renderer.
+ *
+ *         Multiple ExecutorCompletionServices can share a single Executor, so it is perfectly sensible to create an ExecutorCompletionService
+ *         that is private to a particular computation while sharing a common Executor. When used in this way, a CompletionService acts as a handle
+ *         for a batch of computations in much the same way that a Future acts as a handle for a single computation.
+ *         By remembering how many tasks were submitted to the CompletionService and counting how many completed results are retrieved,
+ *         you can know when all the results for a given batch have been retrieved, even if you use a shared Executor.
  */
 public abstract class Renderer {
 
