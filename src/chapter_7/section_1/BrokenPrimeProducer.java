@@ -12,6 +12,9 @@ import java.util.concurrent.BlockingQueue;
  *         the producer gets ahead of the consumer, the queue will fill up and put will block. What happens if the consumer tries to cancel the
  *         producer task while it is blocked in put? It can call cancel which will set the cancelled flag but the producer will never check the flag
  *         because it will never emerge from the blocking put (because the consumer has stopped retrieving primes from the queue).
+ *
+ *         BrokenPrimeProducer can be easily fixed (and simplified)
+ *         by using interruption instead of a boolean flag to request cancellation, as shown @see {@link PrimeGenerator}.
  */
 class BrokenPrimeProducer extends Thread {
 
