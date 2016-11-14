@@ -19,7 +19,11 @@ import static chapter_5.section_5.LaunderThrowable.launderThrowable;
  *         unconditionally in a finally block, taking advantage of the fact that cancelling a completed task has no effect.) If the underlying
  *         computation throws an exception prior to cancellation, it is rethrown from timedRun, which is the most convenient way for the caller to
  *         deal with the exception.
+ *
  *         TimedRun also illustrates another good practice: cancelling tasks whose result is no longer needed.
+ *
+ *         When Future.get throws InterruptedException or TimeoutException and you know that the result is no longer needed by the program,
+ *         cancel the task with Future.cancel.
  */
 public class TimedRun {
 
