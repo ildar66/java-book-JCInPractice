@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * InterruptBorrowedThread
  * <p/>
- * Scheduling an interrupt on a borrowed thread
+ * Scheduling an interrupt on a borrowed thread. Don't Do this.
  * @author Brian Goetz and Tim Peierls
  *         Shows an attempt at running an arbitrary Runnable for a given amount of time. It runs the task in the calling thread and schedules a
  *         cancellation task to interrupt it after a given time interval. This addresses the problem of unchecked exceptions thrown from the task,
