@@ -21,4 +21,24 @@
  * processing. In a graceful shutdown, tasks currently in progress might be allowed to complete; in a more immediate shutdown, currently executing
  * tasks might be cancelled.
  */
+
+/**
+ * There is nothing in the API or language specification that ties interruption to any specific cancellation semantics, but in practice, using
+ * interruption for anything but cancellation is fragile and difficult to sustain in larger applications.
+ *
+ * Interruption is usually the most sensible way to implement cancellation.
+ *
+ *  Interruption Policies:
+ *  Because each thread has its own interruption policy, you should not interrupt a thread unless you know what interruption means to that thread.
+ *
+ *  When you call an interruptible blocking method such as Thread.sleep or BlockingQueue.put,
+ *  there are two practical strategies for handling InterruptedException:
+ * Propagate the exception (possibly after some task-specific cleanup), making your method an interruptible blocking method, too;
+ *          or
+ * Restore the interruption status so that code higher up on the call stack can deal with it.
+ *
+ * Only code that implements a thread's interruption policy may swallow an interruption request.
+ * General-purpose task and library code should never swallow interruption requests.
+ */
+
 package chapter_7.section_1;
