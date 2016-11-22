@@ -12,6 +12,11 @@ import net.jcip.annotations.ThreadSafe;
  * <p/>
  * Reducing lock duration
  * @author Brian Goetz and Tim Peierls
+ *         Because AttributeStore has only one state variable, attributes, we can improve it further by the technique of delegating thread safety
+ *         (Section 4.3). By replacing attributes with a thread-safe Map (a Hashtable, synchronizedMap, or ConcurrentHashMap), AttributeStore can
+ *         delegate all its thread safety obligations to the underlying thread-safe collection. This eliminates the need for explicit synchronization
+ *         in AttributeStore, reduces the lock scope to the duration of the Map access, and removes the risk that a future maintainer will undermine
+ *         thread safety by forgetting to acquire the appropriate lock before accessing attributes.
  */
 @ThreadSafe
 public class BetterAttributeStore {
