@@ -7,6 +7,7 @@
  * Responsiveness: the delay between a request for and completion of some action (also called latency); or
  * Scalability: the improvement in throughput (or lack thereof) as more resources (usually CPUs) are made available.
  *
+ * SUMMARY:
  * Testing concurrent programs for correctness can be extremely challenging because many of the possible failure modes of concurrent programs
  * are low-probability events that are sensitive to timing, load, and other hard-to-reproduce conditions. Further, the testing infrastructure can
  * introduce additional synchronization or timing constraints that can mask concurrency problems in the code being tested. Testing concurrent
