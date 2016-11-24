@@ -55,7 +55,7 @@ public class PutTakeTest extends TestCase {
         return y;
     }
 
-    class Producer implements Runnable {
+    public class Producer implements Runnable {
 
         public void run() {
             try {
@@ -75,7 +75,7 @@ public class PutTakeTest extends TestCase {
         }
     }
 
-    class Consumer implements Runnable {
+    public class Consumer implements Runnable {
 
         public void run() {
             try {
