@@ -2,6 +2,12 @@
  * Created by User on 30.11.2016.
  * What is a Memory Model, and Why would I Want One?
  *
+ * The Java Memory Model is specified in terms of actions, which include reads and writes to variables, locks and unlocks of monitors,
+ * and starting and joining with threads. The JMM defines a partial ordering called happens-before on all actions within the program.
+ * To guarantee that the thread executing action B can see the results of action A (whether or not A and B occur in different threads),
+ * there must be a happens-before relationship between A and B. In the absence of a happens-before ordering between two operations,
+ * the JVM is free to reorder them as it pleases.
+ *
  * The rules for happens-before are:
 
      Program order rule. Each action in a thread happens-before every action in that thread that comes later in the program order.
